@@ -1,0 +1,117 @@
+.about__bento {
+  display: grid;
+  gap: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+.about__story,
+.about__mission,
+.about__values,
+.about__focus {
+  min-width: 0;
+  padding: clamp(1.2rem, 3vw, 1.65rem);
+  border-radius: var(--r-lg);
+  color: var(--text);
+}
+
+.about__story-inner {
+  display: grid;
+  gap: 0;
+  color: var(--text-soft);
+}
+
+.about__story-inner p {
+  padding-block: 0.85rem;
+}
+
+.about__story-inner p:first-child {
+  padding-top: 0;
+}
+
+.about__story-inner p:last-child {
+  padding-bottom: 0;
+}
+
+.about__story-inner p + p {
+  border-top: 1px solid var(--glass-border);
+}
+
+.about__icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-sm);
+  margin-bottom: 0.9rem;
+  color: var(--accent);
+  background: var(--glass-fill-strong);
+  box-shadow: var(--glass-shadow);
+}
+
+.about__mission h3,
+.about__values h3,
+.about__focus h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.65rem;
+}
+
+.about__mission p {
+  color: var(--text-soft);
+}
+
+.about__value-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.about__focus-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.35rem;
+}
+
+.about__value-list .glass-chip,
+.about__focus-grid .glass-chip {
+  border: 1px solid var(--glass-border);
+  background: var(--glass-fill);
+  box-shadow: none;
+  color: var(--text-soft);
+  transition:
+    border-color 0.2s var(--ease-smooth),
+    color 0.2s var(--ease-smooth);
+}
+
+.about__value-list .glass-chip:hover,
+.about__focus-grid .glass-chip:hover {
+  transform: none;
+  color: var(--text-soft);
+  box-shadow: none;
+}
+
+@media (min-width: 800px) {
+  .about__bento {
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-areas:
+      'story mission'
+      'story values'
+      'focus focus';
+  }
+
+  .about__story {
+    grid-area: story;
+  }
+
+  .about__mission {
+    grid-area: mission;
+  }
+
+  .about__values {
+    grid-area: values;
+  }
+
+  .about__focus {
+    grid-area: focus;
+  }
+}

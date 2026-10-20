@@ -1,0 +1,27 @@
+.fab-top {
+  position: fixed;
+  z-index: 90;
+  right: max(1rem, env(safe-area-inset-right, 0px));
+  bottom: max(1rem, env(safe-area-inset-bottom, 0px));
+  width: 3.25rem;
+  height: 3.25rem;
+  min-width: 52px;
+  min-height: 52px;
+  padding: 0;
+  border-radius: 50%;
+  color: var(--accent);
+  animation: fabIn 220ms var(--ease-smooth);
+}
+
+@keyframes fabIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (min-width: 900px) {
+  .fab-top { right: 1.75rem; bottom: 1.75rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fab-top { animation: none; }
+}

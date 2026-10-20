@@ -1,0 +1,25 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+.vscode/*
+!.vscode/extensions.json
+.idea
+.vercel
+
+# Source notes / root asset duplicates (served from public/)
+about.txt
+contact.txt
+project.txt
+/certificate/
+/alixon_portrait.svg
+/my-imkon-logo.svg
+/quizlab-logo.png
+/sattorov_cv.pdf
+tsconfig.tsbuildinfo
+RECOVERY.md

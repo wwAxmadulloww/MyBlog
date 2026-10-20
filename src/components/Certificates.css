@@ -1,0 +1,140 @@
+.certs__filters {
+  position: relative;
+  width: min(100%, 280px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.35rem;
+  margin-bottom: 1.75rem;
+  padding: 0.46rem 15px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--r-pill);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(218, 232, 250, 0.46));
+  -webkit-backdrop-filter: blur(22px) saturate(1.65);
+  backdrop-filter: blur(22px) saturate(1.65);
+  box-shadow: 0 12px 28px rgba(39, 69, 111, 0.14), inset 0 1.5px 0 rgba(255, 255, 255, 0.96), inset 0 -1px 0 rgba(95, 132, 180, 0.12);
+}
+
+.certs__filter {
+  min-width: 0;
+  width: 100%;
+  min-height: 40px;
+  padding: 0.48rem 0.85rem;
+  border-radius: var(--r-pill);
+  border: 1px solid transparent;
+  background: transparent;
+  box-shadow: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-soft);
+  background: transparent;
+  box-shadow: none;
+  transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.certs__filter:hover,
+.certs__filter:focus-visible {
+  color: var(--text);
+}
+
+.certs__filter.is-active {
+  color: #fff;
+  border-color: rgba(255,255,255,.72);
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(255, 255, 255, .56), transparent 58%),
+    linear-gradient(145deg, rgba(71, 145, 228, .94), rgba(13, 91, 177, .93));
+  box-shadow: 0 7px 17px rgba(7, 83, 159, .26), inset 0 1.5px 0 rgba(255,255,255,.6), inset 0 -1px 0 rgba(4, 54, 111, .25);
+}
+
+.certs__grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.certs__card.glass-panel--strong {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.2rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  border-radius: var(--r-md);
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(255, 255, 255, 0.9), transparent 46%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.69), rgba(237, 246, 255, 0.44) 56%, rgba(210, 229, 251, 0.55));
+  -webkit-backdrop-filter: blur(22px) saturate(1.55);
+  backdrop-filter: blur(22px) saturate(1.55);
+  box-shadow: 0 14px 30px rgba(39, 69, 111, 0.11), inset 0 1.5px 0 rgba(255, 255, 255, 0.96), inset 0 -1px 0 rgba(95, 132, 180, 0.11);
+  min-height: 100%;
+  transition: transform 180ms var(--ease-smooth), box-shadow 180ms ease;
+}
+
+.certs__card:hover,
+.certs__card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--glass-shadow-hover);
+}
+
+.certs__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  align-self: flex-start;
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--r-pill);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(222, 237, 255, 0.55));
+  -webkit-backdrop-filter: blur(14px) saturate(1.5);
+  backdrop-filter: blur(14px) saturate(1.5);
+  box-shadow: 0 4px 10px rgba(39, 69, 111, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+@media (max-width: 420px) {
+  .certs__filters { width: 100%; justify-content: space-between; }
+  .certs__filter { flex: 1; min-width: 0; }
+}
+
+.certs__card h3 {
+  font-size: 1rem;
+  flex: 1;
+}
+
+.certs__open {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-soft);
+  transition: color 180ms ease, transform 180ms var(--ease-smooth);
+}
+
+.certs__card:hover .certs__open {
+  color: var(--accent);
+  transform: translateX(2px);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .certs__filters, .certs__card, .certs__badge {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .certs__filters, .certs__card, .certs__badge { background: var(--bg-soft); }
+  .certs__filter.is-active { background: var(--accent); }
+}
+
+@media (min-width: 640px) {
+  .certs__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
+  .certs__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
