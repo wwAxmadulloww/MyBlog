@@ -48,7 +48,6 @@
   height: 100%;
   display: block;
   object-fit: contain;
-  transform: translateY(13px);
 }
 .hero__media-shade {
   display: none;
