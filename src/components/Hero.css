@@ -155,11 +155,11 @@
 @media (max-width: 899px) {
   .hero { align-items: end; padding-top: calc(4.5rem + env(safe-area-inset-top, 0px)); padding-bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px)); }
   .hero__media {
-    inset: 3.5rem 0 auto;
+    inset: 3.5rem 0 0;
     width: 100%;
-    height: 78%;
+    height: auto;
   }
-  .hero__portrait-stage { height: 100%; }
+  .hero__portrait-stage { height: min(100%, 78dvh); }
   .hero__content { width: calc(100% - 2rem); padding-bottom: 0.2rem; }
   .hero__copy { width: min(100%, 560px); }
   .hero__kicker { margin-bottom: 1rem; padding: 0.55rem 0.78rem; font-size: 0.62rem; }
