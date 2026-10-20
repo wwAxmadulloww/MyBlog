@@ -46,11 +46,6 @@
   backdrop-filter: blur(25.3px) saturate(1.65);
 }
 
-.nav:not(.nav--scrolled) .nav__logo,
-.nav:not(.nav--scrolled) .nav__cv {
-  background: linear-gradient(135deg, #3a697c, #18343f);
-}
-
 .nav:not(.nav--scrolled) .nav__link:hover {
   color: #0f2027;
 }
